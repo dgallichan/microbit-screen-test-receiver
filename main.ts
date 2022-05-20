@@ -1,6 +1,13 @@
 radio.onReceivedValue(function (name, value) {
     if (name == "imAsNumber") {
-        thisPixelCalcVal = 0
+        basic.showLeds(`
+            # # # # #
+            . . . . .
+            . . # . .
+            . . . . .
+            # # # # #
+            `)
+        thisPixelCalcVal = value
         for (let index_rows = 0; index_rows <= 4; index_rows++) {
             for (let index_cols = 0; index_cols <= 4; index_cols++) {
                 thisPixelValue = thisPixelCalcVal % 2
@@ -16,6 +23,7 @@ radio.onReceivedValue(function (name, value) {
 })
 let thisPixelValue = 0
 let thisPixelCalcVal = 0
+radio.setGroup(99)
 basic.showLeds(`
     # # # . #
     # . # . #
@@ -23,4 +31,3 @@ basic.showLeds(`
     # . # . .
     # . # . #
     `)
-radio.setGroup(99)
