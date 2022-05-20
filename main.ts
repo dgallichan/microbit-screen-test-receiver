@@ -1,12 +1,5 @@
 radio.onReceivedValue(function (name, value) {
     if (name == "im") {
-        basic.showLeds(`
-            # # # # #
-            . . . . .
-            . . # . .
-            . . . . .
-            # # # # #
-            `)
         thisPixelCalcVal = value
         for (let index_rows = 0; index_rows <= 4; index_rows++) {
             for (let index_cols = 0; index_cols <= 4; index_cols++) {
