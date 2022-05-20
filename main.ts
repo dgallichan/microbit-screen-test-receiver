@@ -14,4 +14,11 @@ radio.onReceivedString(function (receivedString) {
 })
 let thisPixelValue = 0
 let thisRowCalcVal = 0
+basic.showLeds(`
+    # # # # .
+    . . . # .
+    . # . # .
+    . # . # .
+    . # . # .
+    `)
 radio.setGroup(1)
