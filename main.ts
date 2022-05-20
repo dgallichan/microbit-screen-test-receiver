@@ -1,5 +1,5 @@
 radio.onReceivedValue(function (name, value) {
-    if (name == "imAsNumber") {
+    if (name == "im") {
         basic.showLeds(`
             # # # # #
             . . . . .
